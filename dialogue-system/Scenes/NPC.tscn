@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckhtsppciomng"]
+
+[ext_resource type="Script" uid="uid://d235dft2s4bjk" path="res://Scripts/NPCTrigger.cs" id="1_fo5tq"]
+[ext_resource type="Shape2D" uid="uid://c4hsvrsrb4f38" path="res://res/new_capsule_shape_2d.tres" id="1_tdvfm"]
+[ext_resource type="Texture2D" uid="uid://c4wjhyk8mx3ut" path="res://res/spr_sitting_bear_6_0.png" id="1_xs5w8"]
+
+[node name="Npc" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_fo5tq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(201, 142)
+shape = ExtResource("1_tdvfm")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(187, 146)
+scale = Vector2(0.953125, 1)
+texture = ExtResource("1_xs5w8")

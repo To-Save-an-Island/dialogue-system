@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0acwrmaj7hv"]
+
+[ext_resource type="Theme" uid="uid://b2mjhe88akmko" path="res://res/new_theme.tres" id="1_4rmbr"]
+[ext_resource type="Script" uid="uid://12hmqfdouiup" path="res://Scripts/DialogueUI.cs" id="1_i7egk"]
+
+[node name="DialogueUi" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_i7egk")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 646.0
+theme = ExtResource("1_4rmbr")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 370.0
+offset_right = 1144.0
+offset_bottom = 472.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 512.0
+offset_right = 1152.0
+offset_bottom = 649.0

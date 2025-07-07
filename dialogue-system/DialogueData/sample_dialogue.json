@@ -1,0 +1,30 @@
+{
+  "nodes": [
+	{
+	  "id": "start",
+	  "text": "Greetings traveler. What brings you here?",
+	  "choices": [
+		{"text": "Looking for work.", "next": "job_offer"},
+		{"text": "Just passing by.", "next": "goodbye"}
+	  ]
+	},
+	{
+	  "id": "job_offer",
+	  "text": "I do have a job if you're brave enough. Interested?",
+	  "choices": [
+		{"text": "Tell me more.", "next": "details"},
+		{"text": "Not now.", "next": "goodbye"}
+	  ]
+	},
+	{
+	  "id": "details",
+	  "text": "Meet me at the tavern tonight.",
+	  "events": ["start_quest"],
+	  "next": "dialogue_end"
+	},
+	{
+	  "id": "goodbye",
+	  "text": "Safe travels."
+	}
+  ]
+}

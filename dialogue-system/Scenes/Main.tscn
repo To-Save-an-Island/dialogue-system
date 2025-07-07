@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqaoi23mk5hme"]
+
+[ext_resource type="Script" uid="uid://bh0w4gwx1co5o" path="res://Scripts/Player.cs" id="1_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://c0acwrmaj7hv" path="res://Scenes/UI/DialogueUI.tscn" id="2_kln2b"]
+[ext_resource type="Shape2D" uid="uid://bvgd1ot2h24mv" path="res://res/player_capsule_shape.tres" id="2_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://ckhtsppciomng" path="res://Scenes/NPC.tscn" id="3_rgh2o"]
+[ext_resource type="Texture2D" uid="uid://ccxo6mocumche" path="res://res/spr_turtle_still_D_0.png" id="3_v1gob"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
+script = ExtResource("1_pbw6q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(53, 108)
+shape = ExtResource("2_pbw6q")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(54, 107)
+texture = ExtResource("3_v1gob")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Npc" parent="Node2D" instance=ExtResource("3_rgh2o")]
+position = Vector2(0.561981, 1.81818)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueUi" parent="CanvasLayer" instance=ExtResource("2_kln2b")]
+offset_left = 1.0
+offset_right = 1.0
