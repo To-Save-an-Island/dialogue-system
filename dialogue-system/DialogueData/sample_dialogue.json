@@ -20,7 +20,7 @@
 	  "id": "details",
 	  "text": "Meet me at the tavern tonight.",
 	  "events": ["start_quest"],
-	  "next": "dialogue_end"
+	  "next": "goodbye"
 	},
 	{
 	  "id": "goodbye",

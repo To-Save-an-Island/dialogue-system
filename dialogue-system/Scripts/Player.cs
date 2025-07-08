@@ -22,7 +22,7 @@ public partial class Player : CharacterBody2D
     {
         if (!movementEnabled)
         {
-            GD.Print("Movement is disabled."); // DEBUG
+            //GD.Print("Movement is disabled."); // DEBUG
             return;
         }
         // Only allow movement if enabled
